@@ -43,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_moonlander(
     RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, FR_CIRC,        FR_EACU,        FR_DQUO,        FR_APOS,        KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_GRV,         FR_EGRV,        FR_UGRV,        FR_CCED,        FR_AGRV,        KC_TRANSPARENT,
+    KC_TRANSPARENT, FR_CIRC,        FR_EACU,        FR_DQUO,        FR_QUOT,        KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_GRV,         FR_EGRV,        FR_UGRV,        FR_CCED,        FR_AGRV,        KC_TRANSPARENT,
     KC_TRANSPARENT, FR_MINS,        FR_DLR,         FR_LPRN,        FR_RPRN,        KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, FR_HASH,        FR_LCBR,        FR_RCBR,        FR_ASTR,        FR_UNDS,        KC_TRANSPARENT,
-    KC_TRANSPARENT, FR_AT,          FR_AMP,         FR_LESS,        FR_GRTR,        KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_LBRC,        FR_RBRC,        FR_PERC,        FR_EXLM,        KC_TRANSPARENT,
+    KC_TRANSPARENT, FR_AT,          FR_AMPR,        FR_LABK,        FR_RABK,        KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_LBRC,        FR_RBRC,        FR_PERC,        FR_EXLM,        KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, MO(4),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
@@ -123,7 +123,7 @@ void set_layer_color(int layer) {
 }
 
 void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+  if (keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case 0:
       set_layer_color(0);
