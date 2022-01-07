@@ -12,6 +12,8 @@
 #define FIRMWARE_VERSION u8"jXKZa/mDJvX"
 #define RGB_MATRIX_STARTUP_SPD 60
 
+// Note: COMBO_COUNT will no longer be needed with firmware 21, see:
+// - https://github.com/qmk/qmk_firmware/pull/8591
 #define COMBO_COUNT 2
 #define COMBO_TERM 40
 #define COMBO_PERMISSIVE_HOLD

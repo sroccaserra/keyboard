@@ -30,7 +30,7 @@ enum custom_keycodes {
   FR_RSPC,
 };
 
-
+#include "keymap_combo.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -82,25 +82,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
-
-///
-// Start combos
-
-// Note: also update COMBO_COUNT in config.h
-//
-// - https://docs.qmk.fm/#/keycodes
-// - https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
-
-const uint16_t PROGMEM esc_combo[] = { KC_E, KC_R, COMBO_END };
-const uint16_t PROGMEM enter_combo[] = { KC_COMMA, KC_DOT, COMBO_END };
-
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(esc_combo, KC_ESCAPE),
-    COMBO(enter_combo, KC_ENTER),
-};
-
-// End combos
-///
 
 extern bool g_suspend_state;
 extern rgb_config_t rgb_matrix_config;

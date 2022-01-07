@@ -1,0 +1,2 @@
+COMB(qesc_combo, KC_ESCAPE, KC_Q, KC_W)
+COMB(ment_combo, KC_ENTER, KC_M, KC_COMMA)
