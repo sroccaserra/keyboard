@@ -4,10 +4,10 @@
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
-  ST_MACRO_0,
-  ST_MACRO_1,
-  ST_MACRO_2,
-  ST_MACRO_3,
+  E_A_MAJ, // É
+  E_G_MAJ, // È
+  C_C_MAJ, // Ç
+  A_G_MAJ, // À
   FR_LSPO,
   FR_RSPC,
 };
@@ -21,6 +21,11 @@ enum custom_keycodes {
 #define HOME_K MT(MOD_RGUI, FR_K)
 #define HOME_L MT(MOD_RALT, FR_L)
 #define HOME_M MT(MOD_RCTL, FR_M)
+
+#define CTL_PLU LCTL(FR_PLUS)
+#define CTL_MIN LCTL(FR_MINS)
+#define CTL_ZER LCTL(FR_0)
+#define _PIPE   RALT(FR_MINS)
 
 #define SH_COPY LCTL(LSFT(KC_C))
 #define SH_PAST LCTL(LSFT(KC_V))
@@ -74,12 +79,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         _______, _______, _______, /**/ _______, _______, _______
   ),
   [_MAJ_ACC] = LAYOUT_moonlander(
-    _______, _______, _______,   _______,     _______, _______,         _______, /**/ _______, _______, _______,      _______,      _______,      _______,   _______,
-    _______, _______, ST_MACRO_0,LALT(FR_DLR),_______, LGUI(LSFT(KC_5)),_______, /**/ _______, _______, ST_MACRO_1,   _______,      ST_MACRO_2,   ST_MACRO_3,_______,
-    _______, KC_MUTE, KC_VOLD,   KC_VOLU,     _______, _______,         _______, /**/ _______, _______, FR_TILD,      FR_BSLS,      RALT(FR_MINS),_______,   _______,
-    _______, _______, KC_BRID,   KC_BRIU,     _______, _______,                  /**/          _______, LCTL(FR_MINS),LCTL(FR_PLUS),LCTL(FR_0),   _______,   _______,
-    _______, _______, _______,   _______,     _______, _______,                  /**/          _______, _______,      _______,      _______,      _______,   _______,
-                                              _______, _______,         _______, /**/ _______, _______, _______
+    _______, _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, E_A_MAJ, _______, _______, _______, _______, /**/ _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
+    _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______, _______, /**/ _______, _______, FR_TILD, FR_BSLS, _PIPE,   _______, _______,
+    _______, _______, KC_BRID, KC_BRIU, _______, _______,          /**/          _______, CTL_MIN, CTL_PLU, CTL_ZER, _______, _______,
+    _______, _______, _______, _______, _______, _______,          /**/          _______, _______, _______, _______, _______, _______,
+                                        _______, _______, _______, /**/ _______, _______, _______
   ),
   [_NUM_NAV] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
@@ -176,25 +181,25 @@ void rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case ST_MACRO_0:
+    case E_A_MAJ:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_2) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
 
     }
     break;
-    case ST_MACRO_1:
+    case E_G_MAJ:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_7) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
 
     }
     break;
-    case ST_MACRO_2:
+    case C_C_MAJ:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_9) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
 
     }
     break;
-    case ST_MACRO_3:
+    case A_G_MAJ:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_0) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
 
