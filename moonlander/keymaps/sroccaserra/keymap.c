@@ -22,6 +22,16 @@ enum custom_keycodes {
 #define HOME_L MT(MOD_RALT, FR_L)
 #define HOME_M MT(MOD_RCTL, FR_M)
 
+#define SH_COPY LCTL(LSFT(KC_C))
+#define SH_PAST LCTL(LSFT(KC_V))
+#define WO_LEFT LALT(KC_LEFT)
+#define TAB_CLO LCTL(KC_F4)
+#define SC_DOWN LGUI(KC_PGDN)
+#define SC_UP   LGUI(KC_PGUP)
+#define SC_HOME LGUI(KC_HOME)
+#define WI_NEXT LALT(FR_SUP2)
+#define VIM_ALT LCTL(RALT(KC_9))
+
 #define HYPER_A LALT(LGUI(LCTL(LSFT(KC_A))))
 #define HYPER_S LALT(LGUI(LCTL(LSFT(KC_S))))
 #define HYPER_D LALT(LGUI(LCTL(LSFT(KC_D))))
@@ -72,12 +82,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                               _______, _______,         _______, /**/ _______, _______, _______
   ),
   [_NUM_NAV] = LAYOUT_moonlander(
-    _______, _______,    _______, _______,         _______,         _______,      _______, /**/ _______, _______, _______,      _______,      _______,      _______,         _______,
-    _______, FR_1,       FR_2,    FR_3,            FR_4,            FR_5,         _______, /**/ _______, FR_6,    FR_7,         FR_8,         FR_9,         FR_0,            _______,
-    _______, KC_LCTRL,   KC_LALT, KC_LGUI,         KC_LSHIFT,       KC_HOME,      _______, /**/ _______, KC_LEFT, KC_DOWN,      KC_UP,        KC_RIGHT,     LCTL(RALT(KC_9)),_______,
-    _______, LCTL(KC_F4),KC_DEL,  LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),LALT(KC_LEFT),         /**/          _______, LGUI(KC_PGDN),LGUI(KC_PGUP),LGUI(KC_HOME),LALT(FR_SUP2),   _______,
-    _______, _______,    _______, _______,         MO(4),           _______,               /**/          _______, _______,      _______,      _______,      _______,         _______,
-                                                   _______,         _______,      _______, /**/ _______, _______, _______
+    _______, _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
+    _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_5,    _______, /**/ _______, FR_6,    FR_7,    FR_8,    FR_9,    FR_0,    _______,
+    _______, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_HOME, _______, /**/ _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
+    _______, TAB_CLO, KC_DEL,  SH_COPY, SH_PAST, WO_LEFT,          /**/          _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
+    _______, _______, _______, _______, MO(4),   _______,          /**/          _______, _______, _______, _______, _______, _______,
+                                        _______, _______, _______, /**/ _______, _______, _______
   ),
   [_FN_HYPER] = LAYOUT_moonlander(
     _______, _______,    _______, _______, _______, _______, _______, /**/ TO(5),   _______, _______,   _______, _______, _______, _______,
