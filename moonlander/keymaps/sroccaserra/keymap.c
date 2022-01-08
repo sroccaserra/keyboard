@@ -37,8 +37,17 @@ enum custom_keycodes {
 
 #include "keymap_combo.h"
 
+enum layers {
+    _AZERTY = 0,
+    _SYMBOLS,
+    _MAJ_ACC,
+    _NUM_NAV,
+    _FN_HYPER,
+    _GAMES
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_moonlander(
+  [_AZERTY] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
     _______, FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______, /**/ _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    _______,
     _______, HOME_Q,  HOME_S,  HOME_D,  HOME_F,  KC_G,    _______, /**/ _______, KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_M,  _______,
@@ -46,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, MO(2),   MO(1),   KC_LGUI,          /**/          _______, MO(3),   _______, _______, _______, _______,
                                         KC_SPC,  KC_TAB,  _______, /**/ _______, KC_ESC,  KC_BSPC
   ),
-  [1] = LAYOUT_moonlander(
+  [_SYMBOLS] = LAYOUT_moonlander(
     RESET,   _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
     _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______, /**/ _______, FR_GRV,  FR_EGRV, FR_UGRV, FR_CCED, FR_AGRV, _______,
     _______, FR_MINS, FR_DLR,  FR_LPRN, FR_RPRN, _______, _______, /**/ _______, FR_HASH, FR_LCBR, FR_RCBR, FR_ASTR, FR_UNDS, _______,
@@ -54,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______,          /**/          _______, MO(4),   _______, _______, _______, _______,
                                         _______, _______, _______, /**/ _______, _______, _______
   ),
-  [2] = LAYOUT_moonlander(
+  [_MAJ_ACC] = LAYOUT_moonlander(
     _______, _______, _______,   _______,     _______, _______,         _______, /**/ _______, _______, _______,      _______,      _______,      _______,   _______,
     _______, _______, ST_MACRO_0,LALT(FR_DLR),_______, LGUI(LSFT(KC_5)),_______, /**/ _______, _______, ST_MACRO_1,   _______,      ST_MACRO_2,   ST_MACRO_3,_______,
     _______, KC_MUTE, KC_VOLD,   KC_VOLU,     _______, _______,         _______, /**/ _______, _______, FR_TILD,      FR_BSLS,      RALT(FR_MINS),_______,   _______,
@@ -62,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,   _______,     _______, _______,                  /**/          _______, _______,      _______,      _______,      _______,   _______,
                                               _______, _______,         _______, /**/ _______, _______, _______
   ),
-  [3] = LAYOUT_moonlander(
+  [_NUM_NAV] = LAYOUT_moonlander(
     _______, _______,    _______, _______,         _______,         _______,      _______, /**/ _______, _______, _______,      _______,      _______,      _______,         _______,
     _______, FR_1,       FR_2,    FR_3,            FR_4,            FR_5,         _______, /**/ _______, FR_6,    FR_7,         FR_8,         FR_9,         FR_0,            _______,
     _______, KC_LCTRL,   KC_LALT, KC_LGUI,         KC_LSHIFT,       KC_HOME,      _______, /**/ _______, KC_LEFT, KC_DOWN,      KC_UP,        KC_RIGHT,     LCTL(RALT(KC_9)),_______,
@@ -70,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______,    _______, _______,         MO(4),           _______,               /**/          _______, _______,      _______,      _______,      _______,         _______,
                                                    _______,         _______,      _______, /**/ _______, _______, _______
   ),
-  [4] = LAYOUT_moonlander(
+  [_FN_HYPER] = LAYOUT_moonlander(
     _______, _______,    _______, _______, _______, _______, _______, /**/ TO(5),   _______, _______,   _______, _______, _______, _______,
     _______, KC_F1,      KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, /**/ _______, KC_F6,   KC_F7,     KC_F8,   KC_F9,   KC_F10,  _______,
     _______, HYPER_A,    HYPER_S, HYPER_D, HYPER_F, HYPER_G, _______, /**/ _______, HYPER_H, HYPER_J,   HYPER_K, HYPER_L, KC_F11,  _______,
@@ -78,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, WEBUSB_PAIR,_______, _______, _______, _______,          /**/          _______, _______,   _______, _______, _______, _______,
                                            _______, _______, _______, /**/ _______, _______, _______
   ),
-  [5] = LAYOUT_moonlander(
+  [_GAMES] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______, /**/ TO(0),   _______, _______, _______, _______, LALT(KC_F12),KC_F12,
     _______, KC_ESC,  FR_A,    FR_Z,    KC_E,    KC_R,    _______, /**/ _______, KC_T,    KC_Y,    KC_UP,   KC_I,    KC_O,        KC_P,
     _______, KC_LCTL, FR_Q,    KC_S,    KC_D,    KC_F,    _______, /**/ _______, KC_G,    KC_LEFT, KC_DOWN, KC_RIGHT,KC_L,        KC_SCOLON,
