@@ -39,52 +39,52 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /**/ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    KC_TRNS, /**/ KC_TRNS, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_TRNS,
-    KC_TRNS, HOME_Q,  HOME_S,  HOME_D,  HOME_F,  KC_G,    KC_TRNS, /**/ KC_TRNS, KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_M,  KC_TRNS,
-    KC_TRNS, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,             /**/          KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, MO(2),   MO(1),   KC_LGUI,          /**/          KC_TRNS, MO(3),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_SPC,  KC_TAB,  KC_TRNS,                                     /**/ KC_TRNS, KC_ESC,  KC_BSPC
+    _______, _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
+    _______, FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______, /**/ _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    _______,
+    _______, HOME_Q,  HOME_S,  HOME_D,  HOME_F,  KC_G,    _______, /**/ _______, KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_M,  _______,
+    _______, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,             /**/          KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  _______,
+    _______, _______, _______, MO(2),   MO(1),   KC_LGUI,          /**/          _______, MO(3),   _______, _______, _______, _______,
+                                        KC_SPC,  KC_TAB,  _______, /**/ _______, KC_ESC,  KC_BSPC
   ),
   [1] = LAYOUT_moonlander(
-    RESET,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /**/ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, KC_TRNS, KC_TRNS, /**/ KC_TRNS, FR_GRV,  FR_EGRV, FR_UGRV, FR_CCED, FR_AGRV, KC_TRNS,
-    KC_TRNS, FR_MINS, FR_DLR,  FR_LPRN, FR_RPRN, KC_TRNS, KC_TRNS, /**/ KC_TRNS, FR_HASH, FR_LCBR, FR_RCBR, FR_ASTR, FR_UNDS, KC_TRNS,
-    KC_TRNS, FR_AT,   FR_AMPR, FR_LABK, FR_RABK, KC_TRNS,          /**/          KC_TRNS, FR_LBRC, FR_RBRC, FR_PERC, FR_EXLM, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          /**/          KC_TRNS, MO(4),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                                     /**/ KC_TRNS, KC_TRNS, KC_TRNS
+    RESET,   _______, _______, _______, _______, _______, _______, /**/ _______, _______, _______, _______, _______, _______, _______,
+    _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______, /**/ _______, FR_GRV,  FR_EGRV, FR_UGRV, FR_CCED, FR_AGRV, _______,
+    _______, FR_MINS, FR_DLR,  FR_LPRN, FR_RPRN, _______, _______, /**/ _______, FR_HASH, FR_LCBR, FR_RCBR, FR_ASTR, FR_UNDS, _______,
+    _______, FR_AT,   FR_AMPR, FR_LABK, FR_RABK, _______,          /**/          _______, FR_LBRC, FR_RBRC, FR_PERC, FR_EXLM, _______,
+    _______, _______, _______, _______, _______, _______,          /**/          _______, MO(4),   _______, _______, _______, _______,
+                                        _______, _______, _______, /**/ _______, _______, _______
   ),
   [2] = LAYOUT_moonlander(
-    KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,     KC_TRNS, KC_TRNS,         KC_TRNS, /**/ KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS,   KC_TRNS,
-    KC_TRNS, KC_TRNS, ST_MACRO_0,LALT(FR_DLR),KC_TRNS, LGUI(LSFT(KC_5)),KC_TRNS, /**/ KC_TRNS, KC_TRNS, ST_MACRO_1,   KC_TRNS,      ST_MACRO_2,   ST_MACRO_3,KC_TRNS,
-    KC_TRNS, KC_MUTE, KC_VOLD,   KC_VOLU,     KC_TRNS, KC_TRNS,         KC_TRNS, /**/ KC_TRNS, KC_TRNS, FR_TILD,      FR_BSLS,      RALT(FR_MINS),KC_TRNS,   KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_BRID,   KC_BRIU,     KC_TRNS, KC_TRNS,                  /**/          KC_TRNS, LCTL(FR_MINS),LCTL(FR_PLUS),LCTL(FR_0),   KC_TRNS,   KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,     KC_TRNS, KC_TRNS,                  /**/          KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS,   KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                                                   /**/ KC_TRNS, KC_TRNS, KC_TRNS
+    _______, _______, _______,   _______,     _______, _______,         _______, /**/ _______, _______, _______,      _______,      _______,      _______,   _______,
+    _______, _______, ST_MACRO_0,LALT(FR_DLR),_______, LGUI(LSFT(KC_5)),_______, /**/ _______, _______, ST_MACRO_1,   _______,      ST_MACRO_2,   ST_MACRO_3,_______,
+    _______, KC_MUTE, KC_VOLD,   KC_VOLU,     _______, _______,         _______, /**/ _______, _______, FR_TILD,      FR_BSLS,      RALT(FR_MINS),_______,   _______,
+    _______, _______, KC_BRID,   KC_BRIU,     _______, _______,                  /**/          _______, LCTL(FR_MINS),LCTL(FR_PLUS),LCTL(FR_0),   _______,   _______,
+    _______, _______, _______,   _______,     _______, _______,                  /**/          _______, _______,      _______,      _______,      _______,   _______,
+                                              _______, _______,         _______, /**/ _______, _______, _______
   ),
   [3] = LAYOUT_moonlander(
-    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,         KC_TRNS,         KC_TRNS,      KC_TRNS, /**/ KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,
-    KC_TRNS, FR_1,       FR_2,    FR_3,            FR_4,            FR_5,         KC_TRNS, /**/ KC_TRNS, FR_6,    FR_7,         FR_8,         FR_9,         FR_0,            KC_TRNS,
-    KC_TRNS, KC_LCTRL,   KC_LALT, KC_LGUI,         KC_LSHIFT,       KC_HOME,      KC_TRNS, /**/ KC_TRNS, KC_LEFT, KC_DOWN,      KC_UP,        KC_RIGHT,     LCTL(RALT(KC_9)),KC_TRNS,
-    KC_TRNS, LCTL(KC_F4),KC_DEL,  LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),LALT(KC_LEFT),         /**/          KC_TRNS, LGUI(KC_PGDN),LGUI(KC_PGUP),LGUI(KC_HOME),LALT(FR_SUP2),   KC_TRNS,
-    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,         MO(4),           KC_TRNS,               /**/          KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,
-    KC_TRNS, KC_TRNS,    KC_TRNS,                                                          /**/ KC_TRNS, KC_TRNS, KC_TRNS
+    _______, _______,    _______, _______,         _______,         _______,      _______, /**/ _______, _______, _______,      _______,      _______,      _______,         _______,
+    _______, FR_1,       FR_2,    FR_3,            FR_4,            FR_5,         _______, /**/ _______, FR_6,    FR_7,         FR_8,         FR_9,         FR_0,            _______,
+    _______, KC_LCTRL,   KC_LALT, KC_LGUI,         KC_LSHIFT,       KC_HOME,      _______, /**/ _______, KC_LEFT, KC_DOWN,      KC_UP,        KC_RIGHT,     LCTL(RALT(KC_9)),_______,
+    _______, LCTL(KC_F4),KC_DEL,  LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),LALT(KC_LEFT),         /**/          _______, LGUI(KC_PGDN),LGUI(KC_PGUP),LGUI(KC_HOME),LALT(FR_SUP2),   _______,
+    _______, _______,    _______, _______,         MO(4),           _______,               /**/          _______, _______,      _______,      _______,      _______,         _______,
+                                                   _______,         _______,      _______, /**/ _______, _______, _______
   ),
   [4] = LAYOUT_moonlander(
-    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /**/ TO(5),   KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_F1,      KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_TRNS, /**/ KC_TRNS, KC_F6,   KC_F7,     KC_F8,   KC_F9,   KC_F10,  KC_TRNS,
-    KC_TRNS, HYPER_A,    HYPER_S, HYPER_D, HYPER_F, HYPER_G, KC_TRNS, /**/ KC_TRNS, HYPER_H, HYPER_J,   HYPER_K, HYPER_L, KC_F11,  KC_TRNS,
-    KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, HYPER_V, KC_TRNS,          /**/          KC_TRNS, HYPER_COMM,KC_TRNS, KC_TRNS, KC_F12,  KC_TRNS,
-    KC_TRNS, WEBUSB_PAIR,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          /**/          KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS,    KC_TRNS,                                     /**/ KC_TRNS, KC_TRNS, KC_TRNS
+    _______, _______,    _______, _______, _______, _______, _______, /**/ TO(5),   _______, _______,   _______, _______, _______, _______,
+    _______, KC_F1,      KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, /**/ _______, KC_F6,   KC_F7,     KC_F8,   KC_F9,   KC_F10,  _______,
+    _______, HYPER_A,    HYPER_S, HYPER_D, HYPER_F, HYPER_G, _______, /**/ _______, HYPER_H, HYPER_J,   HYPER_K, HYPER_L, KC_F11,  _______,
+    _______, _______,    _______, _______, HYPER_V, _______,          /**/          _______, HYPER_COMM,_______, _______, KC_F12,  _______,
+    _______, WEBUSB_PAIR,_______, _______, _______, _______,          /**/          _______, _______,   _______, _______, _______, _______,
+                                           _______, _______, _______, /**/ _______, _______, _______
   ),
   [5] = LAYOUT_moonlander(
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /**/ TO(0),   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, LALT(KC_F12),KC_F12,
-    KC_TRNS, KC_ESC,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_TRNS, /**/ KC_TRNS, KC_T,    KC_Y,    KC_UP,   KC_I,    KC_O,        KC_P,
-    KC_TRNS, KC_LCTL, FR_Q,    KC_S,    KC_D,    KC_F,    KC_TRNS, /**/ KC_TRNS, KC_G,    KC_LEFT, KC_DOWN, KC_RIGHT,KC_L,        KC_SCOLON,
-    KC_TRNS, KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,             /**/          KC_B,    KC_N,    KC_M,    KC_COMMA,KC_RALT,     KC_SLASH,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          /**/          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                                     /**/ KC_TRNS, KC_TRNS, KC_TRNS
+    _______, _______, _______, _______, _______, _______, _______, /**/ TO(0),   _______, _______, _______, _______, LALT(KC_F12),KC_F12,
+    _______, KC_ESC,  FR_A,    FR_Z,    KC_E,    KC_R,    _______, /**/ _______, KC_T,    KC_Y,    KC_UP,   KC_I,    KC_O,        KC_P,
+    _______, KC_LCTL, FR_Q,    KC_S,    KC_D,    KC_F,    _______, /**/ _______, KC_G,    KC_LEFT, KC_DOWN, KC_RIGHT,KC_L,        KC_SCOLON,
+    _______, KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,             /**/          KC_B,    KC_N,    KC_M,    KC_COMMA,KC_RALT,     KC_SLASH,
+    _______, _______, _______, _______, _______, _______,          /**/          _______, _______, _______, _______, _______,     _______,
+                                        _______, _______, _______, /**/ _______, _______, _______
   ),
 };
 
