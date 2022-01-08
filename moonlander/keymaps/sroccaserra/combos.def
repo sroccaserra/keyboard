@@ -1,2 +1,4 @@
-COMB(qesc_combo, KC_ESCAPE, KC_Q, KC_W)
-COMB(ment_combo, KC_ENTER, KC_M, KC_COMMA)
+COMB(a_escape_combo, KC_ESCAPE, KC_Q, HOME_F)
+COMB(q_tab_combo, KC_TAB, HOME_Q, HOME_F)
+COMB(m_enter_combo, KC_ENTER, HOME_J, HOME_M)
+COMB(p_bspc_combo, KC_BSPC, HOME_J, KC_P)
