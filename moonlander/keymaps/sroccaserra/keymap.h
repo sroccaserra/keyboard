@@ -42,4 +42,6 @@
 #define HYPR_CO LALT(LGUI(LCTL(LSFT(FR_COMM))))
 #define _ORYX   WEBUSB_PAIR
 
+#define _MISTER LALT(KC_F12)
+
 #endif // __KEYMAP_H__
