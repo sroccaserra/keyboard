@@ -13,6 +13,9 @@
 #define HOME_L MT(MOD_RALT, FR_L)
 #define HOME_M MT(MOD_RCTL, FR_M)
 
+#define TAB_SYM LT(_SYMBOLS, KC_TAB)
+#define ENT_NUM LT(_NUM_NAV, KC_ENT)
+
 #define CTL_PLU LCTL(FR_PLUS)
 #define CTL_MIN LCTL(FR_MINS)
 #define CTL_ZER LCTL(FR_0)
