@@ -1,0 +1,44 @@
+#ifndef __KEYMAP_H__
+#define __KEYMAP_H__
+
+#include "keymap_french.h"
+
+#define HOME_Q MT(MOD_LCTL, FR_Q)
+#define HOME_S MT(MOD_LALT, FR_S)
+#define HOME_D MT(MOD_LGUI, FR_D)
+#define HOME_F MT(MOD_LSFT, FR_F)
+
+#define HOME_J MT(MOD_RSFT, FR_J)
+#define HOME_K MT(MOD_RGUI, FR_K)
+#define HOME_L MT(MOD_RALT, FR_L)
+#define HOME_M MT(MOD_RCTL, FR_M)
+
+#define CTL_PLU LCTL(FR_PLUS)
+#define CTL_MIN LCTL(FR_MINS)
+#define CTL_ZER LCTL(FR_0)
+#define _PIPE   RALT(FR_MINS)
+
+#define SH_COPY LCTL(LSFT(KC_C))
+#define SH_PAST LCTL(LSFT(KC_V))
+#define WO_LEFT LALT(KC_LEFT)
+#define TAB_CLO LCTL(KC_F4)
+#define SC_DOWN LGUI(KC_PGDN)
+#define SC_UP   LGUI(KC_PGUP)
+#define SC_HOME LGUI(KC_HOME)
+#define WI_NEXT LALT(FR_SUP2)
+#define VIM_ALT LCTL(RALT(KC_9))
+
+#define HYPER_A LALT(LGUI(LCTL(LSFT(KC_A))))
+#define HYPER_S LALT(LGUI(LCTL(LSFT(KC_S))))
+#define HYPER_D LALT(LGUI(LCTL(LSFT(KC_D))))
+#define HYPER_F LALT(LGUI(LCTL(LSFT(KC_F))))
+#define HYPER_G LALT(LGUI(LCTL(LSFT(KC_G))))
+#define HYPER_V LALT(LGUI(LCTL(LSFT(KC_V))))
+
+#define HYPER_H LALT(LGUI(LCTL(LSFT(KC_H))))
+#define HYPER_J LALT(LGUI(LCTL(LSFT(KC_J))))
+#define HYPER_K LALT(LGUI(LCTL(LSFT(KC_K))))
+#define HYPER_L LALT(LGUI(LCTL(LSFT(KC_L))))
+#define HYPER_COMM LALT(LGUI(LCTL(LSFT(FR_COMM))))
+
+#endif // __KEYMAP_H__
