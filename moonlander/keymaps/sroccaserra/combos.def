@@ -1,6 +1,6 @@
 COMB(s_esc_combo, KC_ESC,  HOME_S, HOME_F)
 COMB(z_esc_combo, KC_ESC,  FR_Z,   KC_E)
-COMB(i_esc_combo, KC_ESC,  KC_I,   KC_O)
 COMB(q_tab_combo, KC_TAB,  HOME_D, HOME_F)
 COMB(m_ent_combo, KC_ENT,  HOME_J, HOME_L)
+COMB(i_ent_combo, KC_ENT,  KC_I,   KC_O)
 COMB(p_bsp_combo, KC_BSPC, HOME_J, HOME_K)
