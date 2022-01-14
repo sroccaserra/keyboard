@@ -1,5 +1,5 @@
-#ifndef __KEYMAP_H__
-#define __KEYMAP_H__
+#ifndef __KEYMAP_DEFINES_H__
+#define __KEYMAP_DEFINES_H__
 
 #include "keymap_french.h"
 
@@ -47,4 +47,4 @@
 
 #define _MISTER LALT(KC_F12)
 
-#endif // __KEYMAP_H__
+#endif // __KEYMAP_DEFINES_H__

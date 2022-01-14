@@ -2,8 +2,8 @@
 #include "version.h"
 #include "keymap_french.h"
 
-#include "keymap.h"
-#include "keymap_combo.h"
+#include "./keymap_defines.h"
+#include "./keymap_combo.h"
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
