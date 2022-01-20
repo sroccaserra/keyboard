@@ -7,3 +7,6 @@ COMB(i_del_combo, KC_DEL,  KC_I,   HOME_L)
 COMB(e_del_combo, KC_DEL,  KC_E,   HOME_S)
 COMB(j_bsp_combo, KC_BSPC, HOME_J, KC_I)
 COMB(f_bsp_combo, KC_BSPC, HOME_F, KC_E)
+
+COMB(u_slh_combo, LSFT(FR_COLN), KC_U, HOME_M)
+COMB(u_dot_combo, LSFT(FR_SCLN), KC_U, HOME_K)
