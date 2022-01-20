@@ -35,8 +35,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_SYMBOLS] = LAYOUT_moonlander(
     RESET,   _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
-    _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, FR_GRV,  FR_EGRV, FR_UGRV, FR_CCED, FR_AGRV, _______,
-    _______, FR_MINS, FR_DLR,  FR_LPRN, FR_RPRN, _______, _______,      _______, FR_HASH, FR_LCBR, FR_RCBR, FR_ASTR, FR_UNDS, _______,
+    _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, FR_GRV,  FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, _______,
+    _______, FR_MINS, FR_DLR,  FR_LPRN, FR_RPRN, _______, _______,      _______, FR_HASH, FR_LCBR, FR_RCBR, FR_ASTR, FR_UGRV, _______,
     _______, FR_AT,   FR_AMPR, FR_LABK, FR_RABK, _______,                        _______, FR_LBRC, FR_RBRC, FR_PERC, FR_EXLM, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          MO(4),   _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
