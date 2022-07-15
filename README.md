@@ -19,6 +19,16 @@ Initial layout version:
   to build the firmware.
 - `make moonlander:sroccaserra:flash` to flash the firmware.
 
+Example (check docs above):
+
+```shell
+$ git clone git@github.com:zsa/qmk_firmware.git
+$ git submodule init
+$ git submodule update
+$ ln -s ~/Developer/github/keyboard/moonlander/keymaps/sroccaserra keyboards/moonlander/keymaps/
+$ make moonlander:sroccaserra:flash
+```
+
 ## Combos
 
 - <https://docs.qmk.fm/#/keycodes>
