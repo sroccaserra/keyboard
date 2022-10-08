@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, HOME_Q,  HOME_S,  HOME_D,  HOME_F,  KC_G,    _______,      _______, KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_M,  _______,
     _______, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  _______,
     _______, _______, _______, MO(2),   MO(1),            _______,      _______,          MO(3),   MO(6),   _______, _______, _______,
-                                        KC_SPC,  _______, _______,      _______, KC_LGUI, KC_RSFT
+                                        KC_SPC,  _______, _______,      _______, KC_LGUI, CAPSWRD
   ),
   [_SYMBOLS] = LAYOUT_moonlander(
     RESET,   _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
@@ -190,4 +190,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
   }
   return true;
+}
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case KC_A ... KC_Z:
+        case KC_MINS:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case KC_1 ... KC_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case KC_UNDS:
+            return true;
+
+        default:
+            return false;  // Deactivate Caps Word.
+    }
 }
