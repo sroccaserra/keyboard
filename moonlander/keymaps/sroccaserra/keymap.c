@@ -27,7 +27,7 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_AZERTY] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,      TO(5)  , _______, _______, _______, _______, _______, _______,
+    _______, FR_AMPR, FR_LBRC, FR_LCBR, FR_LPRN, _______, _______,      TO(5)  , _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_AT,   _______,
     KC_ESC,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     KC_LCTL, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    _______,      _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
