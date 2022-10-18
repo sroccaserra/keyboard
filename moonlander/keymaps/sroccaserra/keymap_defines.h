@@ -16,6 +16,7 @@
 #define TAB_SYM LT(_SYMBOLS, KC_TAB)
 #define ENT_NUM LT(_NUM_NAV, KC_ENT)
 
+#define M_C_ESC MT(MOD_LCTL, KC_ESC)
 #define CTL_PLU LCTL(FR_PLUS)
 #define CTL_MIN LCTL(FR_MINS)
 #define CTL_ZER LCTL(FR_0)
