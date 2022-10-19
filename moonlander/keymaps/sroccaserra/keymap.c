@@ -48,13 +48,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - \ is on the same key as french /
   // - | is on the same column as l and french /
   // - ` is on the same column as french è
-  // - ù is on the same column as à and the same row as azerty
+  // - ù is on the same column as à and just beside o
   // - ^ is easy to reach & combine with e
   // - % is on the same column as ù
   [_SYMBOLS] = LAYOUT_moonlander(
     RESET,   _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
-    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_PERC, _______,
-    _______, FR_MINS, FR_LBRC, FR_LCBR, FR_LPRN, _______, _______,      _______, _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_UGRV, _______,
+    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_UGRV, _______,
+    _______, FR_MINS, FR_LBRC, FR_LCBR, FR_LPRN, _______, _______,      _______, _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, _______,
     _______, _______, _______, FR_LABK, FR_RABK, _______,                        _______, FR_TILD, _______, FR_BSLS, FR_EXLM, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          MO(4),   _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
