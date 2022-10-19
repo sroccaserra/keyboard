@@ -13,6 +13,12 @@
 #define HOME_L MT(MOD_RALT, FR_L)
 #define HOME_M MT(MOD_RCTL, FR_M)
 
+// For Dvorak layer
+#define HOME_O MT(MOD_LALT, KC_O)
+#define HOME_E MT(MOD_LGUI, KC_E)
+#define HOME_T MT(MOD_RGUI, KC_T)
+#define HOME_N MT(MOD_RALT, KC_N)
+
 #define TAB_SYM LT(_SYMBOLS, KC_TAB)
 #define ENT_NUM LT(_NUM_NAV, KC_ENT)
 
