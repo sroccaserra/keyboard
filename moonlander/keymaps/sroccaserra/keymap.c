@@ -16,13 +16,13 @@ enum custom_keycodes {
 };
 
 enum layers {
-    _AZERTY = 0,
-    _SYMBOLS,
-    _MAJ_ACC,
-    _NUM_NAV,
-    _FN_HYPER,
-    _GAMES,
-    _MOUSE
+    _AZ = 0,  // AZerty
+    _SY,  // SYmbols
+    _MA,  // MAj accents & media
+    _NU,  // NUm & nav
+    _HY,  // HYper
+    _GA,  // GAmes
+    _MO  // MOuse
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,12 +31,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - Use the azerty symbol keys on the main 3 x 10 matrix, this allows to have a full shift layer
   // - Use the azerty symbol keys on the main 8 keys of num rows, they are a little far but on the default layer it's ok
   // - Ctrl keys are on the home row
-  [_AZERTY] = LAYOUT_moonlander(
-    _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      TO(5)  , _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, _______,
+  [_AZ] = LAYOUT_moonlander(
+    _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, _______,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     M_C_ESC, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    _______,      _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
-    _______, _______, _______, MO(2),   MO(1),            _______,      _______,          MO(3),   MO(6),   _______, _______, _______,
+    _______, _______, _______, MO(_MA), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
                                         KC_SPC,  _______, _______,      _______, KC_LGUI, KC_ENT
   ),
   // Rationale:
@@ -51,15 +51,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - ù is on the same column as à and just beside o
   // - ^ is easy to reach & combine with e
   // - % is on the same column as ù
-  [_SYMBOLS] = LAYOUT_moonlander(
+  [_SY] = LAYOUT_moonlander(
     RESET,   _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_UGRV, _______,
     _______, FR_MINS, FR_LBRC, FR_LCBR, FR_LPRN, _______, _______,      _______, _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, _______,
     _______, _______, _______, FR_LABK, FR_RABK, _______,                        _______, FR_TILD, _______, FR_BSLS, FR_EXLM, _______,
-    _______, _______, _______, _______, _______,          _______,      _______,          MO(4),   _______, _______, _______, _______,
+    _______, _______, _______, _______, _______,          _______,      _______,          MO(_HY), _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
-  [_MAJ_ACC] = LAYOUT_moonlander(
+  [_MA] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, _______, E_A_MAJ, _______, _______, _______, _______,      _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
     _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______, _______,      _______, _______, CTL_MIN, CTL_PLU, CTL_ZER, _______, _______,
@@ -67,32 +67,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
-  [_NUM_NAV] = LAYOUT_moonlander(
+  [_NU] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_6,    FR_7,    FR_8,    FR_9,    FR_0,    _______,      _______, _______, KC_HOME, KC_END,  _______, KC_PSCR, _______,
     _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_5,    _______,      _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
     _______, _______, _______, _______, FR_MINS, FR_BSLS,                        _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
-    _______, _______, _______, _______, MO(4),            _______,      _______,          _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, MO(_HY),            _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
-  [_FN_HYPER] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,      TO(5),   _______, _______, _______, _______, _______, _______,
+  [_HY] = LAYOUT_moonlander(
+    _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,      _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
     _______, HYPER_A, HYPER_S, HYPER_D, HYPER_F, HYPER_G, _______,      _______, HYPER_H, HYPER_J, HYPER_K, HYPER_L, KC_F11,  _______,
     _______, _______, _ORYX,   _______, HYPER_V, _______,                        _______, HYPR_CO, _______, _______, KC_F12,  _______,
     _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
-  [_GAMES] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,      TO(0)  , _______, _______, _______, _______, _MISTER, KC_F12 ,
+  [_GA] = LAYOUT_moonlander(
+    _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _MISTER, KC_F12 ,
     _______, KC_ESC , _______, KC_UP  , _______, _______, _______,      _______, _______, FR_W   , KC_X   , FR_Q   , KC_S   , _______,
     _______, KC_D   , KC_LEFT, KC_DOWN, KC_RGHT, KC_C   , _______,      _______, FR_A   , FR_Q   , KC_S   , KC_D   , FR_A   , _______,
     _______, KC_LCTL, KC_LALT, _______, _______, _______,                        FR_Q   , FR_W   , KC_X   , KC_C   , FR_Z   , _______,
-    _______, _______, _______, MO(2)  , MO(1)  ,          KC_F1  ,      KC_BSPC,          MO(3)  , MO(6)  , _______, _______, _______,
+    _______, _______, _______, _______, _______,          KC_F1  ,      KC_BSPC,          _______, _______, _______, _______, _______,
                                         KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
   ),
-  [_MOUSE] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,      TO(0),   _______, _______, _______, _______, _______, _______,
+  [_MO] = LAYOUT_moonlander(
+    _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, KC_BTN1, KC_MS_U, KC_BTN2, _______,
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, _______,
     _______, _______, _______, _______, _______, _______,                        _______, _______, KC_WH_U, KC_WH_D, _______, _______,
