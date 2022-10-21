@@ -17,13 +17,13 @@ enum custom_keycodes {
 
 enum layers {
     _AZ = 0,  // AZerty
+    _DV,  // DVorak
+    _GA,  // GAmes
     _SY,  // SYmbols
     _MA,  // MAj accents & media
     _NU,  // NUm & nav
     _HY,  // HYper
-    _GA,  // GAmes
-    _MO,  // MOuse
-    _DV  // DVorak
+    _MO  // MOuse
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,6 +39,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
     _______, _______, _______, MO(_MA), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
                                         KC_SPC,  _______, _______,      _______, KC_LGUI, KC_ENT
+  ),
+  // Rationale:
+  // - The OS keyboard layout should be azerty
+  // - The four Dvorak punctuation keys are replaced by four azerty punctuation keys
+  // - This allows the number row to use the same symbols as azerty layout, making the transition easier
+  // - This in turn allows to share a common symbol layer between azerty and Dvorak layout
+  [_DV] = LAYOUT_moonlander(
+    _______, _______, _______, _______, _______, _______, TO(_AZ),      _______, _______, _______, _______, _______, _______, _______,
+    _______, FR_COLN, FR_SCLN, FR_COMM, KC_P,    KC_Y,    _______,      _______, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    _______,
+    _______, FR_A,    HOME_O,  HOME_E,  KC_U,    KC_I,    _______,      _______, KC_D,    KC_H,    HOME_T,  HOME_N,  KC_S,    _______,
+    _______, FR_EQL,  FR_Q,    KC_J,    KC_K,    KC_X,                           KC_B,    FR_M,    FR_W,    KC_V,    FR_Z,    _______,
+    _______, _______, _______, MO(_MA), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
+                                        _______, _______, _______,      _______, _______, _______
+  ),
+  [_GA] = LAYOUT_moonlander(
+    _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _MISTER, KC_F12 ,
+    _______, KC_ESC , _______, KC_UP  , _______, _______, _______,      _______, _______, FR_W   , KC_X   , FR_Q   , KC_S   , _______,
+    _______, KC_D   , KC_LEFT, KC_DOWN, KC_RGHT, KC_C   , _______,      _______, FR_A   , FR_Q   , KC_S   , KC_D   , FR_A   , _______,
+    _______, KC_LCTL, KC_LALT, _______, _______, _______,                        FR_Q   , FR_W   , KC_X   , KC_C   , FR_Z   , _______,
+    _______, _______, _______, _______, _______,          KC_F1  ,      KC_BSPC,          _______, _______, _______, _______, _______,
+                                        KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
   ),
   // Rationale:
   // - only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
@@ -84,33 +105,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
-  [_GA] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _MISTER, KC_F12 ,
-    _______, KC_ESC , _______, KC_UP  , _______, _______, _______,      _______, _______, FR_W   , KC_X   , FR_Q   , KC_S   , _______,
-    _______, KC_D   , KC_LEFT, KC_DOWN, KC_RGHT, KC_C   , _______,      _______, FR_A   , FR_Q   , KC_S   , KC_D   , FR_A   , _______,
-    _______, KC_LCTL, KC_LALT, _______, _______, _______,                        FR_Q   , FR_W   , KC_X   , KC_C   , FR_Z   , _______,
-    _______, _______, _______, _______, _______,          KC_F1  ,      KC_BSPC,          _______, _______, _______, _______, _______,
-                                        KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
-  ),
   [_MO] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, KC_BTN1, KC_MS_U, KC_BTN2, _______,
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, _______,
     _______, _______, _______, _______, _______, _______,                        _______, _______, KC_WH_U, KC_WH_D, _______, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,      _______, _______, _______
-  ),
-  // Rationale:
-  // - The OS keyboard layout should be azerty
-  // - The four Dvorak punctuation keys are replaced by four azerty punctuation keys
-  // - This allows the number row to use the same symbols as azerty layout, making the transition easier
-  // - This in turn allows to share a common symbol layer between azerty and Dvorak layout
-  [_DV] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, TO(_AZ),      _______, _______, _______, _______, _______, _______, _______,
-    _______, FR_COLN, FR_SCLN, FR_COMM, KC_P,    KC_Y,    _______,      _______, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    _______,
-    _______, FR_A,    HOME_O,  HOME_E,  KC_U,    KC_I,    _______,      _______, KC_D,    KC_H,    HOME_T,  HOME_N,  KC_S,    _______,
-    _______, FR_EQL,  FR_Q,    KC_J,    KC_K,    KC_X,                           KC_B,    FR_M,    FR_W,    KC_V,    FR_Z,    _______,
-    _______, _______, _______, MO(_MA), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
 };
