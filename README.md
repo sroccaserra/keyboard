@@ -35,3 +35,7 @@ $ make moonlander:sroccaserra:flash
 - <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md>
 - <https://github.com/qmk/qmk_firmware/pull/8591>
 - <https://blog.gboards.ca/2020/02/adventures-in-obscure-c-features-2020.html>
+
+## Colors
+
+- <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgb_matrix.md>
