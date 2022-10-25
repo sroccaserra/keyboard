@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Rationale:
   // - Use azerty keys for letters
   // - Use the azerty symbol keys on the main 3 x 10 matrix, this allows to have a full shift layer
-  // - Use the azerty symbol keys on the main 8 keys of num rows, they are a little far but on the default layer it's ok
+  // - Use the azerty symbol face value keys on the main 8 num row keys, they are a little far but without mod it's ok
   // - Ctrl keys are on the home row
   [_AZ] = LAYOUT_moonlander(
     _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, TO(_DV),      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
@@ -62,8 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
   ),
   // Rationale:
-  // - only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
+  // - Only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
   // - (), {}, and [] are on the home row, in symetric positions
+  // - Exclude the other azerty symbol face value keys on the main 8 num row keys, they are already accessible on the default layer
   // - - is on the home row
   // - @, #, $ and * are on the same column as on qwerty
   // - ~ is on the same key as n
