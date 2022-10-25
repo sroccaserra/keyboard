@@ -38,4 +38,5 @@ $ make moonlander:sroccaserra:flash
 
 ## Colors
 
-- <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgb_matrix.md>
+- RGB Matrix Lighting ~ <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgb_matrix.md>
+- RGB Lighting ~ <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgblight.md>
