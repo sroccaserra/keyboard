@@ -13,6 +13,7 @@ enum custom_keycodes {
   A_G_MAJ, // À
   FR_LSPO,
   FR_RSPC,
+  TMUX_T, // Ctrl-Space Ctrl-T, my tmux shortcut to re-run the other window's last command
 };
 
 enum layers {
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_AZ] = LAYOUT_moonlander(
     _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, TO(_DV),      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-    M_C_ESC, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    _______,      _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
+    M_C_ESC, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    TMUX_T,       _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
     _______, _______, _______, MO(_ME), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
                                         KC_SPC,  _______, _______,      _______, KC_LGUI, KC_ENT
@@ -211,6 +212,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_0) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
 
+    }
+    break;
+    case TMUX_T:
+    if (record->event.pressed) {
+      SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_SPACE) SS_DELAY(100) SS_TAP(X_T) SS_UP(X_LCTL));
     }
     break;
     case FR_LSPO:
