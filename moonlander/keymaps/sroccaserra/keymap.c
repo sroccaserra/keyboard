@@ -24,7 +24,8 @@ enum layers {
     _NU,  // NUm & nav
     _ME,  // MEdia
     _HY,  // HYper
-    _MO  // MOuse
+    _MO,  // MOuse
+    _IJ   // IntelliJ
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -34,11 +35,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - Use the azerty symbol face value keys on the main 8 num row keys, they are a little far but without mod it's ok
   // - Ctrl keys are on the home row
   [_AZ] = LAYOUT_moonlander(
-    _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, TO(_DV),      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
+    KC_ESC,  FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, TO(_DV),      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     M_C_ESC, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    TMUX_T,       _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
-    _______, _______, _______, MO(_ME), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, _______,
+    MO(_IJ), _______, _______, MO(_ME), MO(_SY),          _______,      _______,          MO(_NU), MO(_MO), _______, _______, MO(_IJ),
                                         KC_SPC,  _______, _______,      _______, KC_LGUI, KC_ENT
   ),
   // Rationale:
@@ -116,6 +117,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
+  [_IJ] = LAYOUT_moonlander(
+    _______, IJ_PROJ, IJ_BOOK, IJ_FIND, IJ_TEST, _______, _______,      _______, _______, _______, _______, IJ_GIT,  _______, _______,
+    _______, IJ_SELA, _______, _______, IJ_REFA, IJ_TERM, _______,      _______, _______, IJ_USAG, IJ_NEXT, IJ_PREV, _______, _______,
+    _______, _______, IJ_CHGS, IJ_GDEF, IJ_RENA, _______, _______,      _______, _______, IJ_STDO, IJ_STUP, KC_F4,   _______, _______,
+    _______, IJ_CLOS, _______, _______, IJ_RECT, _______,                        _______, IJ_SETT, IJ_PSET, _______, _______, _______,
+    _______, _______, _______, _______, _______,          _______,      _______,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,      _______, IJ_RUNC, IJ_RUN
+  ),
 };
 
 extern bool g_suspend_state;
@@ -138,6 +147,7 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
     [_ME] = { _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF },
     [_HY] = { _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF },
     [_MO] = { _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF },
+    [_IJ] = { _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF },
 };
 
 void set_layer_color(int layer) {

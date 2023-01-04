@@ -50,4 +50,30 @@
 
 #define _MISTER LALT(KC_F12)
 
+#define IJ_RUN LSFT(KC_F10)
+#define IJ_RUNC ALGR(LSFT(KC_F10))
+
+#define IJ_PREV LALT(LSFT(KC_LEFT))
+#define IJ_NEXT LALT(LSFT(KC_RIGHT))
+#define IJ_GDEF LALT(KC_D)
+#define IJ_SETT LCTL(LALT(KC_S))
+#define IJ_PSET LCTL(LALT(LSFT(KC_S)))
+#define IJ_PROJ LALT(FR_AMPR)
+#define IJ_BOOK LALT(FR_EACU)
+#define IJ_FIND LALT(FR_DQUO)
+#define IJ_TEST LALT(FR_QUOT)
+#define IJ_GIT  LALT(FR_CCED)
+#define IJ_USAG LALT(LSFT(FR_EGRV))
+#define IJ_REFA LCTL(LALT(LSFT(KC_T)))
+#define IJ_CLOS LCTL(LSFT(KC_F4))
+#define IJ_TERM LALT(KC_F12)
+
+#define IJ_RENA LSFT(KC_F6)
+#define IJ_CHGS LCTL(KC_F6)
+#define IJ_STUP LCTL(LSFT(KC_UP))
+#define IJ_STDO LCTL(LSFT(KC_DOWN))
+#define IJ_RECT LALT(LSFT(KC_INS))
+// add cursors for all occurence of word
+#define IJ_SELA LCTL(LALT(LSFT(KC_J)))
+
 #endif // __KEYMAP_DEFINES_H__
