@@ -32,10 +32,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Rationale:
   // - Use azerty keys for letters
   // - Use the azerty symbol keys on the main 3 x 10 matrix, this allows to have a full shift layer
-  // - Use the azerty symbol face value keys on the main 8 num row keys, they are a little far but without mod it's ok
   // - Ctrl keys are on the home row
+  // - (), {}, and [] are on the num row, in symetric positions
+  // - & is on its azerty position
+  // - % is on the same column as ù
   [_AZ] = LAYOUT_moonlander(
-    KC_ESC,  FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, TO(_DV),      TO(_GA), _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
+    KC_ESC,  FR_AMPR, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     M_C_ESC, FR_Q,    HOME_S,  HOME_D,  KC_F,    KC_G,    TMUX_T,       _______, KC_H,    KC_J,    HOME_K,  HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
@@ -65,22 +67,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   // Rationale:
   // - Only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
-  // - (), {}, and [] are on the home row, in symetric positions
   // - Exclude the other azerty symbol face value keys on the main 8 num row keys, they are already accessible on the default layer
   // - - is on the home row
   // - @, #, $ and * are on the same column as on qwerty
   // - ~ is on the same key as n
   // - \ is on the same key as french /
   // - | is on the same column as l and french /
-  // - ` is on the same column as french è
-  // - ù is on the same column as à and just beside o
+  // - ` is on the home row, on the same column as french è
+  // - All french accents on the same layer
+  // - ù is on the same column as à and on its azerty row
   // - ^ is easy to reach & combine with e
-  // - % is on the same column as ù
+  // - Use the azerty symbol face value keys on the main 8 num row keys, they are a little far but without mod it's ok
   // - Accented upper case letters match accented lower case letters
   [_SY] = LAYOUT_moonlander(
     RESET,   _______, E_A_MAJ, _______, _______, _______, _______,      _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
-    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_UGRV, _______,
-    _______, FR_MINS, FR_LBRC, FR_LCBR, FR_LPRN, _______, _______,      _______, _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, _______,
+    _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
+    _______, FR_MINS, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_UGRV, _______,
     _______, _______, _______, FR_LABK, FR_RABK, _______,                        FR_TILD, _______, _______, FR_BSLS, FR_EXLM, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          MO(_HY), _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
