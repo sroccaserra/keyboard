@@ -27,6 +27,7 @@
 #define CTL_MIN LCTL(FR_MINS)
 #define CTL_ZER LCTL(FR_0)
 #define _PIPE   RALT(FR_MINS)
+#define FR_MDOT RALT(FR_COLN)
 
 #define SC_DOWN LGUI(KC_PGDN)
 #define SC_HOME LGUI(KC_HOME)
