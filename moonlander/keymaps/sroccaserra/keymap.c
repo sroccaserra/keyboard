@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    _______,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
     MO(_IJ), _______, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, _______, MO(_IJ),
-                                        KC_SPC,  _______, _______,      _______, KC_LGUI, KC_ENT
+                                        KC_SPC,  KC_LALT, _______,      _______, KC_LGUI, KC_ENT
   ),
   // Rationale:
   // - The OS keyboard layout should be azerty
