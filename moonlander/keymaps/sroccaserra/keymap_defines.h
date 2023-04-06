@@ -69,6 +69,7 @@
 #define IJ_CLOS LCTL(LSFT(KC_F4))
 #define IJ_TERM LALT(KC_F12)
 
+#define IJ_ALTE LALT(KC_ENT)
 #define IJ_RENA LSFT(KC_F6)
 #define IJ_CHGS LCTL(KC_F6)
 #define IJ_STUP LCTL(LSFT(KC_UP))

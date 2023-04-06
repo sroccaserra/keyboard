@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_AZ] = LAYOUT_moonlander(
     KC_ESC,  FR_AMPR, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-    M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    _______,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
+    M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    IJ_ALTE,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
     MO(_IJ), _______, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, _______, MO(_IJ),
                                         KC_SPC,  KC_LALT, _______,      _______, KC_LGUI, KC_ENT
