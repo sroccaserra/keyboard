@@ -79,4 +79,7 @@
 #define IJ_SELA LCTL(LALT(LSFT(KC_J)))
 #define IJ_COMM LCTL(KC_KP_SLASH)
 
+#define OSM_ALT OSM(MOD_LALT)
+#define OSM_ALG OSM(MOD_RALT)
+
 #endif // __KEYMAP_DEFINES_H__
