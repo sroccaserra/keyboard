@@ -77,5 +77,6 @@
 #define IJ_RECT LALT(LSFT(KC_INS))
 // add cursors for all occurence of word
 #define IJ_SELA LCTL(LALT(LSFT(KC_J)))
+#define IJ_COMM LCTL(KC_KP_SLASH)
 
 #endif // __KEYMAP_DEFINES_H__
