@@ -89,11 +89,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Rationale:
   // - *+/-= are with the numbers
   // - * and - are easy to access
+  // - - is not on the r and f column (to make -rf easier)
   [_NU] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_5,    FR_6,    FR_7,    FR_8,    FR_9,    _______,      _______, _______, KC_HOME, KC_END,  _______, KC_PSCR, _______,
     _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_0,    _______,      _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
-    _______, FR_ASTR, FR_SLSH, FR_PLUS, FR_MINS, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
+    _______, FR_MINS, FR_SLSH, FR_PLUS, FR_ASTR, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
     _______, _______, _______, _______, OSL(_HY),         _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
