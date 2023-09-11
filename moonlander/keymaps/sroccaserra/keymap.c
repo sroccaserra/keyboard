@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  FR_AMPR, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    IJ_ALTE,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
-    KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EQL,  KC_RSFT,
+    KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EXLM,  KC_RSFT,
     OSL(_IJ),OSM_ALT, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, OSM_ALG,OSL(_IJ),
                                         KC_SPC,  KC_LALT, _______,      _______, KC_LGUI, KC_ENT
   ),
@@ -68,8 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Rationale:
   // - Only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
   // - Exclude the other azerty symbol face value keys on the main 8 num row keys, they are already accessible on the default layer
-  // - - is on the home row
-  // - @, #, $ and * are on the same column as on qwerty
+  // - @, #, and $ are on the same column as on qwerty
   // - ~ is on the same key as n
   // - \ is on the same key as french /
   // - | is on the same column as l and french /
@@ -82,16 +81,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SY] = LAYOUT_moonlander(
     RESET,   _______, E_A_MAJ, _______, _______, _______, _______,      _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
     _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
-    _______, FR_MINS, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_ASTR, _PIPE,   FR_UGRV, _______,
-    _______, _______, _______, FR_LABK, FR_RABK, _______,                        FR_TILD, _______, _______, FR_BSLS, FR_EXLM, _______,
+    _______, _______, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  _______, _PIPE,   FR_UGRV, _______,
+    _______, _______, _______, FR_LABK, FR_RABK, _______,                        FR_TILD, _______, _______, FR_BSLS, _______, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          OSL(_HY),_______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
+  // Rationale:
+  // - *+/-= are with the numbers
+  // - * and - are easy to access
   [_NU] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_5,    FR_6,    FR_7,    FR_8,    FR_9,    _______,      _______, _______, KC_HOME, KC_END,  _______, KC_PSCR, _______,
     _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_0,    _______,      _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
-    _______, _______, _______, _______, FR_MINS, FR_BSLS,                        _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
+    _______, FR_ASTR, FR_SLSH, FR_PLUS, FR_MINS, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
     _______, _______, _______, _______, OSL(_HY),         _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
