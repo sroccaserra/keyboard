@@ -15,6 +15,7 @@ Initial layout version:
     - <https://docs.qmk.fm/#/newbs_getting_started?id=set-up-your-environment>
 - Make a link or copy the keymap from this repo to the corresponding directory
   in the `qmk_firmware` cloned above.
+    - E.g. to `keyboards/moonlander/keymaps/sroccaserra`
 - From the root of the `qmk_firmware` directory, `make moonlander:sroccaserra`
   to build the firmware.
 - `make moonlander:sroccaserra:flash` to flash the firmware.
@@ -29,6 +30,10 @@ $ ln -s ~/Developer/github/keyboard/moonlander/keymaps/sroccaserra keyboards/moo
 $ make moonlander:sroccaserra:flash
 ```
 
+## Git submodule problems
+
+I have had to `qmk doctor` (see cli scripts)
+
 ## Combos
 
 - <https://docs.qmk.fm/#/keycodes>
@@ -40,3 +45,7 @@ $ make moonlander:sroccaserra:flash
 
 - RGB Matrix Lighting ~ <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgb_matrix.md>
 - RGB Lighting ~ <https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgblight.md>
+
+## Tap Dance
+
+- <https://docs.qmk.fm/#/feature_tap_dance?id=example-5>

@@ -9,3 +9,5 @@ SRC = matrix.c
 
 COMBO_ENABLE = yes
 CAPS_WORD_ENABLE = yes
+
+TAB_DANCE_ENABLE = yes
