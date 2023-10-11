@@ -37,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - & is on its azerty position
   // - % is on the same column as ù
   [_AZ] = LAYOUT_moonlander(
-    KC_ESC,  FR_AMPR, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, FR_PERC, KC_DEL,
+    KC_ESC,  _______, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, _______, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    IJ_ALTE,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
-    KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, FR_EXLM,  KC_RSFT,
+    KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, _______, KC_RSFT,
     OSL(_IJ),OSM_ALT, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, OSM_ALG,OSL(_IJ),
                                         KC_SPC,  KC_LALT, _______,      _______, KC_LGUI, KC_ENT
   ),
@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - Accented upper case letters match accented lower case letters
   [_SY] = LAYOUT_moonlander(
     RESET,   _______, E_A_MAJ, _______, _______, _______, _______,      _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
-    _______, FR_CIRC, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
-    _______, _______, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  _______, _PIPE,   FR_UGRV, _______,
-    _______, _______, _______, FR_LABK, FR_RABK, _______,                        FR_TILD, _______, _______, FR_BSLS, _______, _______,
+    _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
+    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  FR_LABK, _______,      _______, FR_RABK, FR_GRV,  FR_PERC, _PIPE,   FR_UGRV, _______,
+    _______, _______, _______, _______, _______, _______,                        FR_TILD, _______, _______, FR_BSLS, FR_EXLM, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          OSL(_HY),_______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
