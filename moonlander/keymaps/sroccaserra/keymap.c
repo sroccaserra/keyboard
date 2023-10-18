@@ -34,8 +34,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // - Use the azerty symbol keys on the main 3 x 10 matrix, this allows to have a full shift layer
   // - Ctrl keys are on the home row
   // - (), {}, and [] are on the num row, in symetric positions
-  // - & is on its azerty position
-  // - % is on the same column as ù
   [_AZ] = LAYOUT_moonlander(
     KC_ESC,  _______, FR_LBRC, FR_LCBR, FR_LPRN, _______, TO(_DV),      TO(_GA), _______, FR_RPRN, FR_RCBR, FR_RBRC, _______, KC_DEL,
     KC_TAB,  FR_A,    FR_Z,    KC_E,    KC_R,    KC_T,    _______,      _______, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
@@ -44,6 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSL(_IJ),OSM_ALT, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, OSM_ALG,OSL(_IJ),
                                         HYPE_SP, KC_LALT, _______,      _______, KC_LGUI, KC_ENT
   ),
+
   // Rationale:
   // - The OS keyboard layout should be azerty
   // - The four Dvorak punctuation keys are replaced by four azerty punctuation keys
@@ -65,6 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,          KC_F1  ,      KC_BSPC,          _______, _______, _______, _______, _______,
                                         KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
   ),
+
   // Rationale:
   // - Only 3 rows, 8 columns if possible (avoid reaching too far on a non default layer)
   // - Exclude the other azerty symbol face value keys on the main 8 num row keys, they are already accessible on the default layer
@@ -86,15 +86,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,          _______,      _______,          OSL(_HY),_______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
+
   // Rationale:
-  // - *+/-= are with the numbers
-  // - * and - are easy to access
-  // - - is not on the r and f column (to make -rf easier)
+  // - +-/*= are with the numbers
+  // - + and * are easy to access
+  // Position du trait d'union :
+  // - l'avoir accessible car fréquent,
+  // - is not on the r and f column (to make -rf easier)
+  // - pouvoir l'enchaîner entre t et c (est-ce que), donc ni indexe ni majeur,
+  // - et e et q (parce-que), donc ni indexe ni petit doigt => annulaire ?
   [_NU] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_5,    FR_6,    FR_7,    FR_8,    FR_9,    _______,      _______, _______, KC_HOME, KC_END,  _______, KC_PSCR, _______,
     _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_0,    _______,      _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
-    _______, FR_ASTR, FR_SLSH, FR_PLUS, FR_MINS, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
+    _______, FR_PLUS, FR_MINS, FR_SLSH, FR_ASTR, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
     _______, _______, _______, _______, OSL(_HY),         _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
