@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     M_C_ESC, FR_Q,    KC_S,    KC_D,    KC_F,    KC_G,    IJ_ALTE,      TMUX_T,  KC_H,    KC_J,    KC_K,    HOME_L,  FR_M,    KC_RCTL,
     KC_LSFT, FR_W,    KC_X,    KC_C,    KC_V,    KC_B,                           KC_N,    FR_COMM, FR_SCLN, FR_COLN, _______, KC_RSFT,
     OSL(_IJ),OSM_ALT, KC_LALT, MO(_ME), MO(_SY),          IJ_RENA,      IJ_RUN,           MO(_NU), MO(_MO), FR_MDOT, OSM_ALG,OSL(_IJ),
-                                        KC_SPC,  KC_LALT, _______,      _______, KC_LGUI, KC_ENT
+                                        HYPE_SP, KC_LALT, _______,      _______, KC_LGUI, KC_ENT
   ),
   // Rationale:
   // - The OS keyboard layout should be azerty
@@ -108,9 +108,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_HY] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
-    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,      _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-    _______, HYPER_A, HYPER_S, HYPER_D, HYPER_F, HYPER_G, _______,      _______, HYPER_H, HYPER_J, HYPER_K, HYPER_L, KC_F11,  _______,
-    _______, _______, _ORYX,   _______, HYPER_V, _______,                        _______, HYPR_CO, _______, _______, KC_F12,  _______,
+    _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   _______,      _______, _______, _______, _______, _______, _______, _______,
+    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F10,  _______,      _______, _______, _______, _______, _______, _______, _______,
+    _______, KC_F11,  KC_F12,  _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, TO(_AZ),          _______,      _______,          TO(_AZ), _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),

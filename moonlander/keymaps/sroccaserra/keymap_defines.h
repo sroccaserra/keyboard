@@ -13,6 +13,8 @@
 #define HOME_L MT(MOD_RALT, FR_L)
 #define HOME_M MT(MOD_RCTL, FR_M)
 
+#define HYPE_SP MT(MOD_LCTL | MOD_LGUI | MOD_LALT | MOD_LSFT, KC_SPC)
+
 // For Dvorak layer
 #define HOME_O MT(MOD_LALT, KC_O)
 #define HOME_E MT(MOD_LGUI, KC_E)
