@@ -59,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_GA] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,      TO(_AZ), _______, _______, _______, _______, _MISTER, KC_F12 ,
-    _______, KC_ESC , _______, KC_UP  , _______, _______, _______,      _______, _______, FR_W   , KC_X   , FR_Q   , KC_S   , _______,
+    _______, KC_ESC , _______, KC_UP  , _______, _______, _______,      _______, _______, FR_W   , KC_X   , KC_C   , KC_S   , _______,
     _______, KC_D   , KC_LEFT, KC_DOWN, KC_RGHT, KC_C   , _______,      _______, FR_A   , FR_Q   , KC_S   , KC_D   , FR_A   , _______,
     _______, KC_LCTL, KC_LALT, _______, _______, _______,                        FR_Q   , FR_W   , KC_X   , KC_C   , FR_Z   , _______,
     _______, _______, _______, _______, _______,          KC_F1  ,      KC_BSPC,          _______, _______, _______, _______, _______,
-                                        KC_UP  , _______, _______,      _______, KC_RSFT, KC_ENT
+                                        KC_UP  , KC_SPC,  _______,      _______, KC_RSFT, KC_ENT
   ),
 
   // Rationale:
