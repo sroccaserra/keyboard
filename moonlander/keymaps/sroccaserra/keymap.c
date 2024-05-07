@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SY] = LAYOUT_moonlander(
     RESET,   _______, E_A_MAJ, _______, _______, _______, _______,      _______, _______, E_G_MAJ, _______, C_C_MAJ, A_G_MAJ, _______,
     _______, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, _______, _______,      _______, _______, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, KC_DEL,
-    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  FR_LABK, _______,      _______, FR_RABK, FR_GRV,  FR_PERC, _PIPE,   FR_UGRV, _______,
+    _______, FR_CIRC, FR_AT,   FR_HASH, FR_DLR,  _______, _______,      _______, _______, FR_GRV,  FR_PERC, _PIPE,   FR_UGRV, _______,
     _______, _______, _______, _______, _______, _______,                        FR_TILD, _______, _______, FR_BSLS, FR_EXLM, _______,
     _______, _______, _______, _______, _______,          _______,      _______,          OSL(_HY),_______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
     _______, FR_5,    FR_6,    FR_7,    FR_8,    FR_9,    _______,      _______, _______, KC_HOME, KC_END,  _______, KC_PSCR, _______,
     _______, FR_1,    FR_2,    FR_3,    FR_4,    FR_0,    _______,      _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, VIM_ALT, _______,
-    _______, FR_PLUS, FR_MINS, FR_SLSH, FR_ASTR, FR_EQL,                         _______, SC_DOWN, SC_UP,   SC_HOME, WI_NEXT, _______,
+    _______, FR_PLUS, FR_MINS, FR_SLSH, FR_ASTR, _______,                        _______, FR_LABK, FR_RABK, FR_EQL,  WI_NEXT, _______,
     _______, _______, _______, _______, OSL(_HY),         _______,      _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,      _______, _______, _______
   ),
