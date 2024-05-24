@@ -91,6 +91,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Rationale:
   // - +-/*= are with the numbers
   // - + and * are easy to access
+  // - 8 au dessus de 4, impairs et pairs sur mêmes colonnes, 1 et 0 en home row
+  // - <> sur le même layer que - et = pour faire des flèches sans changer de layer
   // Position du trait d'union :
   // - l'avoir accessible car fréquent,
   // - is not on the r and f column (to make -rf easier)
