@@ -7,7 +7,7 @@
 #define TAPPING_TERM 200
 
 #define PERMISSIVE_HOLD
-#define IGNORE_MOD_TAP_INTERRUPT
+// #define IGNORE_MOD_TAP_INTERRUPT // commented because it's now the default & would not compile
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define FIRMWARE_VERSION u8"jXKZa/mDJvX"

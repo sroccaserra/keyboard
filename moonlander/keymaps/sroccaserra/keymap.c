@@ -3,7 +3,6 @@
 #include "keymap_french.h"
 
 #include "./keymap_defines.h"
-#include "./keymap_combo.h"
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
@@ -151,7 +150,7 @@ void keyboard_post_init_user(void) {
 #define _DVC {HSV_GOLD}
 #define _GAC {HSV_GREEN}
 
-const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
+const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [_AZ] = { _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF, _OFF },
     [_DV] = { _OFF, _DVC, _DVC, _DVC, _OFF, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC, _DVC },
     [_GA] = { _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC, _GAC },
@@ -164,7 +163,7 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
 };
 
 void set_layer_color(int layer) {
-  for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
+  for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
     HSV hsv = {
       .h = pgm_read_byte(&ledmap[layer][i][0]),
       .s = pgm_read_byte(&ledmap[layer][i][1]),
@@ -180,8 +179,11 @@ void set_layer_color(int layer) {
   }
 }
 
-void rgb_matrix_indicators_user(void) {
-  if (keyboard_config.disable_layer_led) { return; }
+bool rgb_matrix_indicators_user(void) {
+  if (keyboard_config.disable_layer_led) {
+      return false;
+  }
+
   switch (biton32(layer_state)) {
     case 0:
       set_layer_color(0);
@@ -209,31 +211,33 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(0, 0, 0);
     break;
   }
+
+  return false;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case E_A_MAJ:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_2) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
+      SEND_STRING(SS_TAP(X_CAPS_LOCK) SS_DELAY(100) SS_TAP(X_2) SS_DELAY(100) SS_TAP(X_CAPS_LOCK));
 
     }
     break;
     case E_G_MAJ:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_7) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
+      SEND_STRING(SS_TAP(X_CAPS_LOCK) SS_DELAY(100) SS_TAP(X_7) SS_DELAY(100) SS_TAP(X_CAPS_LOCK));
 
     }
     break;
     case C_C_MAJ:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_9) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
+      SEND_STRING(SS_TAP(X_CAPS_LOCK) SS_DELAY(100) SS_TAP(X_9) SS_DELAY(100) SS_TAP(X_CAPS_LOCK));
 
     }
     break;
     case A_G_MAJ:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_CAPSLOCK) SS_DELAY(100) SS_TAP(X_0) SS_DELAY(100) SS_TAP(X_CAPSLOCK));
+      SEND_STRING(SS_TAP(X_CAPS_LOCK) SS_DELAY(100) SS_TAP(X_0) SS_DELAY(100) SS_TAP(X_CAPS_LOCK));
 
     }
     break;

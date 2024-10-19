@@ -1,6 +1,6 @@
+#include <stdint.h>
+
 // Keymap helpers
-//
-//
 
 #define K_ENUM(name, key, ...) name,
 #define K_DATA(name, key, ...) const uint16_t PROGMEM cmb_##name[] = {__VA_ARGS__, COMBO_END};

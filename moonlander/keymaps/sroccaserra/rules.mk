@@ -7,7 +7,7 @@ MOUSEKEY_ENABLE = yes
 WEBUSB_ENABLE = yes
 SRC = matrix.c
 
-COMBO_ENABLE = yes
+COMBO_ENABLE = no
 CAPS_WORD_ENABLE = yes
 
 TAB_DANCE_ENABLE = yes
